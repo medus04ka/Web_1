@@ -1,0 +1,246 @@
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('../ru-ru.ttf'), url("../en-us.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body {
+    transform: scale(100%);
+    height: 97%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body {
+    font-size: 16px;
+    font-family: "MyCustomFont", sans-serif;;
+    background-image: url("../krblsa.jpg");
+    background-size: cover;
+}
+
+#main-grid {
+    width: 95%;
+    margin:auto;
+    border-spacing: 1em;
+}
+
+#table-plate {
+    width: 65%;
+}
+
+#header-plate {
+    padding: 1em 30px;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #7f95ff;
+    border-radius: 10px;
+}
+
+.content-plate {
+    padding: 0 0 20px;
+    vertical-align:top;
+    background-color: white;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.graph {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(244, 67, 54, 0.66);
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+
+
+.plate-top {
+    display: inline-block;
+    width: 100%;
+    margin: 0 0 20px;
+    padding: 0 0;
+    text-align: center;
+    color: white;
+    background-color: #7f95ff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.plate-top-title {
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#input-grid {
+    width: 95%;
+    margin:auto;
+    text-align: center;
+}
+
+.input-grid-label {
+    width: 12%;
+    font-weight: bold;
+}
+
+#x-text-input {
+    width: 75%;
+    height: 20px;
+    margin: 2% 0;
+}
+
+.text-error {
+    border: 1px solid red;
+}
+
+.box-error {
+    color: red;
+}
+
+.text-error::placeholder {
+    color: red;
+}
+
+.form-subtext {
+    padding-bottom: 2%;
+    font-size: 14px;
+}
+
+.center-labeled {
+    display: inline-block;
+    position: relative;
+    margin: 0 1% 5%;
+    font-size: 14px;
+}
+
+.center-labeled {
+    position: absolute;
+    top: 18px;
+    left: 6px;
+}
+
+.center-labeled .float-labeled {
+    left: 0;
+}
+
+.center-labeled .add-labeled {
+    left: 7px;
+}
+
+.buttons {
+    margin-top:3%
+}
+
+.buttons::before {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 60px;
+    margin: 0 auto 4%;
+    background-color: #6c43af;
+}
+
+.button {
+    height: 27px;
+    width: 70px;
+    font-family: "MyCustomFont", sans-serif;
+    color: #ffffff;
+    background-color: #6c43af;
+    border: none;
+}
+
+.button:hover {
+    background-color: #513284;
+}
+
+#table-plate {
+    position: relative;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    overflow: hidden;
+}
+
+.scroll-container {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    top: 54px;
+    width: 100%;
+    overflow-y: scroll;
+}
+
+#result-table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.8);
+    /*border-radius: 50px;*/
+}
+
+#result-table tr {
+    height: 2em;
+}
+
+#result-table tr:nth-child(2n-1) {
+    background-color: #97a1d5;
+}
+
+#result-table tr:nth-child(2n):hover {
+    background-color: #e9e9e9;
+}
+
+#result-table tr:nth-child(2n-1):hover {
+    background-color: #72638c;
+}
+
+#result-table tr.table-header:hover {
+    background-color: #72638c;
+}
+
+.coords-col {
+    width: 12%;
+}
+
+.time-col {
+    width: 25%;
+}
+
+.left-aligned {
+    float: left;
+}
+
+.right-aligned {
+    float: right;
+}
+
+.radio-group {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.center-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.box-label {
+    margin-bottom: 5px;
+}

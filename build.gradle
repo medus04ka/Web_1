@@ -1,0 +1,45 @@
+plugins {
+    id("java")
+    id("application")
+    id("com.github.johnrengelman.shadow") version "8.1.1"
+}
+
+group = "web"
+version = "1.0"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation("org.json:json:20231013")
+    implementation(files("./bebrik/fastcgi-lib.jar"))
+    testImplementation(platform("org.junit:junit-bom:5.10.0"))
+    testImplementation("org.junit.jupiter:junit-jupiter")
+}
+
+application {
+    mainClass.set("webserver.Main")
+}
+
+tasks.test {
+    useJUnitPlatform()
+}
+
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'webserver.Main'
+        )
+    }
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+    archiveFileName = 'server-1.0.jar'
+}
+
+tasks {
+    build {
+        dependsOn(shadowJar)
+    }
+}
